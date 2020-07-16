@@ -1,24 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import ProductContaners from './containers/ProductContaners';
+import CartContainer from './containers/CartContainer';
+import MessageContainer from './containers/MessageContainer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="hidden-sn animated deep-purple-skin">
+      <Header />
+      <main id="mainContainer">
+        <div className="container">
+          <ProductContaners />
+          <MessageContainer/>
+          <CartContainer />
+        </div>
+      </main>
+      <Footer />
     </div>
   );
 }
